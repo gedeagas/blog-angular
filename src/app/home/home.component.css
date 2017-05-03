@@ -1,0 +1,185 @@
+.grey-bg {
+    background-color: #f7f7f7;
+}
+
+a {
+    text-decoration: none;
+    color: #1f1f1f;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #6D6D6D;
+}
+
+p {
+    color: #787878;
+}
+
+.img-cover {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.side-post {
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+}
+@media only screen and (min-width: 768px) {
+  .side-post.image-right .side-post-image {
+    float: right;
+    -webkit-box-ordinal-group: 3;
+    -moz-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  .side-post.image-right .side-post-image .post-category {
+    left: 20px;
+    right: auto;
+  }
+  .side-post.image-right .side-post-content {
+    text-align: right;
+  }
+}
+.side-post:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+.side-post .side-post-image,
+.side-post .side-post-content {
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .side-post .side-post-image,
+  .side-post .side-post-content {
+    width: 50%;
+    /* float: left; */
+  }
+}
+@media only screen and (max-width: 767px) {
+  .side-post .side-post-image {
+    min-height: 350px;
+  }
+}
+.side-post .side-post-image figure {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.side-post .side-post-image .post-category {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+.side-post .side-post-image .post-category > a {
+  display: block;
+  background-color: #00c3da;
+  color: #fff;
+  border-radius: 5px;
+  padding: 6px 16px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.side-post .side-post-content {
+  background-color: #fff;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.side-post .side-post-content .post-content-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 75px 50px;
+}
+@media only screen and (max-width: 991px) {
+  .side-post .side-post-content .post-content-wrapper {
+    padding: 50px 35px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .side-post .side-post-content .post-content-wrapper {
+    padding: 35px 25px;
+  }
+}
+.side-post .side-post-content .post-info {
+  margin-bottom: 15px;
+}
+.side-post .side-post-content .post-info h6 {
+  font-size: 12px;
+  font-weight: 500;
+  color: #b4b4b4;
+  margin: 0;
+}
+.side-post .side-post-content .post-info h6 > span {
+  display: inline-block;
+  margin-right: 4px;
+}
+.side-post .side-post-content .post-info h6 > span > i {
+  display: inline-block;
+  font-size: 15px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.side-post .side-post-content .post-title {
+  margin-bottom: 15px;
+}
+.side-post .side-post-content .post-title h3 {
+  margin: 0;
+}
+.side-post .side-post-content .post-body {
+  line-height: 26px;
+}
+.single-post-info .post-author,
+.side-post .post-author {
+  margin-top: 15px;
+}
+.single-post-info .post-author > img,
+.side-post .post-author > img {
+  width: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.single-post-info .post-author > a,
+.side-post .post-author > a {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+}

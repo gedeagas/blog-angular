@@ -1,6 +1,79 @@
-<div *ngFor="let post of blogPosts">
- <h2>{{post.title}}</h2>
 
-        <div [innerHTML]="post.body"></div>
+
+<div class="row grey-bg">
+         <div class="col-md-2">.col-md-4</div>
+        <div class="col-md-8">
+
+                <article class="side-post animated fadeInUp" data-animation="fadeInUp">
+                <div class="side-post-image">
+                  <div class="post-category"><a href="#">Lifestyle</a>
+                  </div>
+                  <a href="#">
+                    <figure class="img-cover" style="background-image: url(http://themes.hody.co/html/bezel/images/blog-1.jpg);">
+                      
+                    </figure>
+                  </a>
+                </div>
+                <div class="side-post-content">
+                  <div class="post-content-wrapper">
+                    <div class="post-info">
+                      <h6><span><i class="hc-clock"></i>Posted on</span><span class="post-time">March 23, 2017</span><span>in <a href="#">Lifestyle</a></span></h6>
+                    </div>
+                    <div class="post-title">
+                      <h3><a href="#">What's Coming to Netflix</a></h3>
+                    </div>
+                    <div class="post-body">
+                      <p>Quae veritatis, quisquam ullam dolore quam in, consequatur, beatae delectus, fugit alias soluta nihil? Fuga placeat, similique non totam quisquam eos dolore.</p>
+                    </div>
+                    <div class="post-author">
+                      <img src="images/testimonial-2.jpg" alt=""><a href="#">by Mike Ross</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+        </div>
+
+        <div class="col-md-2">.col-md-4</div>
 
 </div>
+
+
+
+<div class="row grey-bg">
+         <div class="col-md-2"></div>
+        <div class="col-md-8">
+                <article *ngFor="let post of blogPosts" class="side-post animated fadeInUp" data-animation="fadeInUp">
+                        <div class="side-post-image">
+                        <div class="post-category"><a href="#">Lifestyle</a>
+                        </div>
+                        <a href="#">
+                        <figure class="img-cover" style="background-image: url(https://source.unsplash.com/1600x900/?nature,water);">
+                        
+                        </figure>
+                        </a>
+                        </div>
+                        <div class="side-post-content">
+                        <div class="post-content-wrapper">
+                        <div class="post-info">
+                        <h6><span>Posted on</span><span class="post-time">{{post.created_at | date:'longDate'}}</span><span>in <a href="#">Lifestyle</a></span></h6>
+                        </div>
+                        <div class="post-title">
+                        <h3><a href="#" class="black-font">{{post.title}}</a></h3>
+                        </div>
+                        <div class="post-body">
+                                <p class="" [innerHTML]="post.body | truncate : 128"></p>
+
+                        </div>
+                        <div class="post-author">
+                        <img src="http://themes.hody.co/html/bezel/images/testimonial-1.jpg" alt=""><a href="#">by Agastya Darma</a>
+                        </div>
+                        </div>
+                        </div>
+                </article>
+        
+        </div>
+
+        <div class="col-md-2"></div>
+
+</div>
+

@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+import { TruncateModule } from 'ng2-truncate';
+import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
+
+
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -10,7 +14,8 @@ import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
   { path: 'login',component: LoginComponent },
-    { path: 'home',component: HomeComponent },
+  
+    { path: '',component: HomeComponent },
 
   
 ];
@@ -27,7 +32,10 @@ const appRoutes: Routes = [
 
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    TruncateModule,
+    SlimLoadingBarModule.forRoot()
+
   ],
   providers: [],
   bootstrap: [AppComponent]
