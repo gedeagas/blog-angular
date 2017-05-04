@@ -1,4 +1,8 @@
-        <ng2-slim-loading-bar></ng2-slim-loading-bar>
+
+
+
+<div  *ngFor="let blogPost of blogPosts">
+
 
 <section id="particles-js" class="page-title parallax-section">
 <nav id="navbar" class="">
@@ -37,70 +41,9 @@
             </div>
             <div id="navigation">
               <ul class="navigation-menu nav">
-                <li class="menu-item-has-children has-megamenu">
-                  <a href="#">Home</a>
-                  <ul class="submenu megamenu">
-                    <li class="menu-item-has-children">
-                      <a class="menu-label" href="#">Home Pages I</a>
-                      <ul class="sub-menu">
-                        <li>
-                          <a href="index.html">Home Default</a>
-                        </li>
-                        <li>
-                          <a href="home-digital-agency.html">Home Digital Agency</a>
-                        </li>
-                        <li>
-                          <a href="home-creative-agency.html">Home Creative Agency</a>
-                        </li>
-                        <li>
-                          <a href="home-minimal.html">Home Minimal</a>
-                        </li>
-                        <li>
-                          <a href="home-business.html">Home Business</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a class="menu-label" href="#">Home Pages II</a>
-                      <ul class="sub-menu">
-                        <li>
-                          <a href="home-landing.html">Home Landing</a>
-                        </li>
-                        <li>
-                          <a href="home-architecture.html">Home Architecture</a>
-                        </li>
-                        <li>
-                          <a href="home-photography.html">Home Photography</a>
-                        </li>
-                        <li>
-                          <a href="home-resume.html">Home Resume</a>
-                        </li>
-                        <li>
-                          <a href="home-fitness.html">Home Fitness</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a class="menu-label" href="#">Home Pages III</a>
-                      <ul class="sub-menu">
-                        <li>
-                          <a href="home-portfolio.html">Home Portfolio</a>
-                        </li>
-                        <li>
-                          <a href="home-fashion.html">Home Fashion</a>
-                        </li>
-                        <li>
-                          <a href="home-one-page.html">Home One Page</a>
-                        </li>
-                        <li>
-                          <a href="home-restaurant.html">Home Restaurant</a>
-                        </li>
-                        <li>
-                          <a href="home-startup.html">Home Startup</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
+                <li class="menu-item">
+                  <a [routerLink]="['/']">Home</a>
+                
                 </li>
                 <li class="menu-item-has-children"><a href="#">Pages</a>
                   <ul class="submenu">
@@ -315,9 +258,11 @@
           <div class="v-center">
             <div class="container">
               <div class="title text-center">
-                <h1 class="header-title">Agastya Darma Lasksana</h1>
-                <h4 class="header-subtitle"> A young, versatile, and hardworking person looking for a platform to impact the society <br>and also a fast
-learner with a thirst for challenges.</h4>
+                 <h6 class="color-white"><span><i class="fa fa-clock"></i>Posted on </span><span class="post-time">March 23, 2017 </span></h6>
+                <h1 class="header-title">{{blogPost.title}}</h1>
+                 <div class="post-author">
+                        <img src="https://scontent.fsub2-1.fna.fbcdn.net/v/t1.0-9/13782219_1752403055032175_4714217242329715703_n.jpg?_nc_eui2=v1%3AAeFybJDjpYbfqBBGIDPb5WB_WZNS5QnviKuGlJCL2s35j644q4K3omlUNrHZGSUQ9GnSvJk23FOT7fdZBYbChGMMAq2nUOYxBJrAx8GdUxsTjpLib2-jwgfOE3-h_3dCBnE&oh=7a5f39072ce3ae91d79ae27bd4ea8b40&oe=59793AB8" alt=""><a href="post.title">By Agastya Darma Laksana</a>
+                </div>
               </div>
             </div>
           </div>
@@ -325,46 +270,15 @@ learner with a thirst for challenges.</h4>
       </section>
 
 
+  <div class="container">
+          <div class="row">
+              <div class="col-md-10s col-md-offset-1">
+                          <div class="post-single" [innerHTML]="blogPost.body"></div>
 
-        
- <div class="container-fluid">
+              </div>
+          </div>
 
-<div class="row grey-bg home-post">
-         <div class="col-md-2"></div>
-        <div class="col-md-8">
-                <article *ngFor="let post of blogPosts" class="side-post animated fadeInUp" data-animation="fadeInUp">
-                        <div class="side-post-image">
-                        <div class="post-category"><a href="#">Lifestyle</a>
-                        </div>
-                        <a href="#">
-                        <figure class="img-cover" style="background-image: url(https://source.unsplash.com/1600x900/?nature,water);">
-                        
-                        </figure>
-                        </a>
-                        </div>
-                        <div class="side-post-content">
-                        <div class="post-content-wrapper">
-                        <div class="post-info">
-                        <h6><i class="fa fa-clock-o" aria-hidden="true"></i> <span>Posted on</span><span class="post-time">{{post.created_at | date:'longDate'}}</span><span>in <a href="#">Lifestyle</a></span></h6>
-                        </div>
-                        <div class="post-title">
-                        <h3><a  [routerLink]="['/p/', post.slug]" class="black-font">{{post.title}}</a></h3>
-                        </div>
-                        <div class="post-body">
-                                <p class="" [innerHTML]="post.body | truncate : 128"></p>
+  </div>
 
-                        </div>
-                        <div class="post-author">
-                        <img src="https://scontent.fsub2-1.fna.fbcdn.net/v/t1.0-9/13782219_1752403055032175_4714217242329715703_n.jpg?_nc_eui2=v1%3AAeFybJDjpYbfqBBGIDPb5WB_WZNS5QnviKuGlJCL2s35j644q4K3omlUNrHZGSUQ9GnSvJk23FOT7fdZBYbChGMMAq2nUOYxBJrAx8GdUxsTjpLib2-jwgfOE3-h_3dCBnE&oh=7a5f39072ce3ae91d79ae27bd4ea8b40&oe=59793AB8" alt=""><a href="post.title">by {{post.display_name}}</a>
-                        </div>
-                        </div>
-                        </div>
-                </article>
-        
-        </div>
-
-        <div class="col-md-2"></div>
 
 </div>
-
- </div>

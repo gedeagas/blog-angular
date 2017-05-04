@@ -8,6 +8,18 @@ a {
     font-weight: bold;
 }
 
+.color-white {
+    color: #fff;
+}
+
+.post-author img {
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
 a:hover {
     color: #6D6D6D;
 }
@@ -46,4 +58,18 @@ section {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+}
+.post-single {
+      padding-bottom: 110px;
+      padding-top:110px;
+      font-family: 'Source Sans Pro', sans-serif !important;
+      position: relative;
+  background-color: #fff;
+  padding-bottom: 110px;
+  z-index: 10;
+}
+
+.post-single img {
+    width: 100%;
+    height: auto;
 }
