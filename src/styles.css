@@ -198,6 +198,15 @@
 
 
 
+
+.post-single img {
+    padding: 25px 0px 25px 0px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
 .centrize {
   display: table;
   table-layout: fixed;
