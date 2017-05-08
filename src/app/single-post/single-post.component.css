@@ -28,6 +28,10 @@ p {
     color: #787878;
 }
 
+.posted-by {
+    color: #fff;
+    font-weight: lighter;
+}
 .header-title {
     font-weight: bold;
     color: #fff;
