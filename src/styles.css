@@ -594,7 +594,7 @@
     top: 100%;
     left: 0;
     z-index: 1000;
-    padding: 15px 0;
+    padding: 0px 0;
     list-style: none;
     min-width: 200px;
     visibility: hidden;
@@ -668,7 +668,8 @@
     font-weight: 400;
   }
   #navbar .navigation-menu > li .submenu li a:hover {
-    color: #1f1f1f;
+    color: #fff;
+    background: #1f1f1f;
   }
   #navbar .navigation-menu > li .submenu li .menu-label {
     display: block;
